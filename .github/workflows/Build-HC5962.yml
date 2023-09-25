@@ -16,7 +16,7 @@ on:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_BRANCH: a2a0e5b9f6ce420398487ea29a85b0b0c49c9087
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: HC5962-diff.config
   DIY_P1_SH: diy-part1.sh
