@@ -20,8 +20,10 @@
 # 添加 OpenAppFilter 应用过滤插件
 #git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 
+# 修改默认主题
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+sed -i "s/luci-theme-bootstrap/luci-theme-argon/g" feeds/luci/collections/luci/Makefile
 
 sed -i '132,153d' ./target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
 sed -i '131a &ethernet {\n	compatible = "mediatek,ralink-mt7621-eth";\n	mediatek,switch = <&gsw>;\n};\n\n&gsw {\n	compatible = "mediatek,ralink-mt7621-gsw";' ./target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
