@@ -13,11 +13,11 @@ echo 'src-git go-aliyundrive-webdav  https://github.com/jerrykuku/luci-app-go-al
 #echo 'src-git autotimeset  https://github.com/sirpdboy/luci-app-autotimeset' >>feeds.conf.default
 #echo 'src-git autotimeset  https://github.com/sirpdboy/luci-app-autotimeset' >>feeds.conf.default
 #echo 'src-git autotimeset  https://github.com/sirpdboy/luci-app-autotimeset' >>feeds.conf.default
-svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-timewol
-svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-webrestriction
-svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-weburl
-svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-timecontrol
-svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit
+svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-timewol package/luci-app-control-timewol
+svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-webrestriction package/luci-app-control-webrestriction
+svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-weburl package/luci-app-control-weburl
+svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-timecontrol package/luci-app-timecontrol
+svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit package/luci-app-cpulimit
 
 #git_clone https://github.com/messense/aliyundrive-webdav aliyundrive && mv -n aliyundrive/openwrt/* ./ ; rm -rf aliyundrive
 #git_clone https://github.com/messense/aliyundrive-fuse aliyundrive && mv -n aliyundrive/openwrt/* ./;rm -rf aliyundrive
