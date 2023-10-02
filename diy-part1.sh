@@ -32,6 +32,9 @@ git clone https://github.com/messense/aliyundrive-webdav aliyundrive && mv -n al
 git clone https://github.com/messense/aliyundrive-fuse aliyundrive && mv -n aliyundrive/openwrt/* ./package/;rm -rf aliyundrive
 #git_clone https://github.com/zzsj0928/luci-app-pushbot
 
+echo feeds.conf.default
+cat feeds.conf.default
+
 # 修改默认主题
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
