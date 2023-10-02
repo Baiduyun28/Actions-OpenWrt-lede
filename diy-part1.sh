@@ -4,16 +4,16 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-echo 'src-git luci-app-autotimeset https://github.com/sirpdboy/luci-app-autotimeset' >>feeds.conf.default
-echo 'src-git luci-app-ddns-go https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.default
-echo 'src-git luci-app-eqosplus https://github.com/sirpdboy/luci-app-eqosplus' >>feeds.conf.default
-echo 'src-git luci-app-parentcontrol https://github.com/sirpdboy/luci-app-parentcontrol' >>feeds.conf.default
+echo 'src-git autotimeset https://github.com/sirpdboy/luci-app-autotimeset' >>feeds.conf.default
+echo 'src-git ddnsgo https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.default
+echo 'src-git eqosplus https://github.com/sirpdboy/luci-app-eqosplus' >>feeds.conf.default
+echo 'src-git parentcontrol https://github.com/sirpdboy/luci-app-parentcontrol' >>feeds.conf.default
 svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit package/luci-app-cpulimit #版本更新
 #svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol #2.2-20200927
 svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-watchcat-plus package/luci-app-watchcat-plus
 
-echo 'src-git luci-app-go-aliyundrive-webdav https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav' >>feeds.conf.default
-echo 'src-git go-aliyundrive-webdav https://github.com/jerrykuku/go-aliyundrive-webdav' >>feeds.conf.default
+echo 'src-git goaliyundrivewebdav1 https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav' >>feeds.conf.default
+echo 'src-git goaliyundrivewebdav2 https://github.com/jerrykuku/go-aliyundrive-webdav' >>feeds.conf.default
 
 svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-timewol package/luci-app-control-timewol #1.0-3-20220406
 svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-webrestriction package/luci-app-control-webrestriction
@@ -38,7 +38,7 @@ cat feeds.conf.default
 # 修改默认主题
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-sed -i "s/luci-theme-bootstrap/luci-theme-argon/g" feeds/luci/collections/luci/Makefile
+sed -i "s/luci-theme-bootstrap/luci-theme-argon/g" package/feeds/luci/collections/luci/Makefile
 
 # 切换传统交换机swconfig
 sed -i '132,153d' ./target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
