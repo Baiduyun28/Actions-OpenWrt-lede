@@ -11,7 +11,7 @@ echo 'src-git ddnsgo https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.
 #git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 #echo 'src-git parentcontrol https://github.com/sirpdboy/luci-app-parentcontrol' >>feeds.conf.default
 #git clone https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
-#svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit package/luci-app-cpulimit #版本更新
+svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit package/luci-app-cpulimit #版本更新
 #svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol #2.2-20200927
 #svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-watchcat-plus package/luci-app-watchcat-plus
 
