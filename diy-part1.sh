@@ -4,16 +4,21 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-echo 'src-git autotimeset/luci-app-autotimeset https://github.com/sirpdboy/luci-app-autotimeset' >>feeds.conf.default
+#echo 'src-git autotimeset https://github.com/sirpdboy/luci-app-autotimeset' >>feeds.conf.default
+git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 echo 'src-git ddnsgo https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.default
-echo 'src-git eqosplus https://github.com/sirpdboy/luci-app-eqosplus' >>feeds.conf.default
-echo 'src-git parentcontrol https://github.com/sirpdboy/luci-app-parentcontrol' >>feeds.conf.default
+#echo 'src-git eqosplus https://github.com/sirpdboy/luci-app-eqosplus' >>feeds.conf.default
+git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
+#echo 'src-git parentcontrol https://github.com/sirpdboy/luci-app-parentcontrol' >>feeds.conf.default
+git clone https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
 svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit package/luci-app-cpulimit #版本更新
 #svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol #2.2-20200927
 svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-watchcat-plus package/luci-app-watchcat-plus
 
-echo 'src-git goaliyundrivewebdav1 https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav' >>feeds.conf.default
-echo 'src-git goaliyundrivewebdav2 https://github.com/jerrykuku/go-aliyundrive-webdav' >>feeds.conf.default
+#echo 'src-git goaliyundrivewebdav1 https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav' >>feeds.conf.default
+git clone https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav package/luci-app-go-aliyundrive-webdav
+#echo 'src-git goaliyundrivewebdav2 https://github.com/jerrykuku/go-aliyundrive-webdav' >>feeds.conf.default
+git clone https://github.com/jerrykuku/go-aliyundrive-webdav package/go-aliyundrive-webdav
 
 svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-timewol package/luci-app-control-timewol #1.0-3-20220406
 svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-webrestriction package/luci-app-control-webrestriction
@@ -32,7 +37,6 @@ git clone https://github.com/messense/aliyundrive-webdav aliyundrive && mv -n al
 git clone https://github.com/messense/aliyundrive-fuse aliyundrive && mv -n aliyundrive/openwrt/* ./package/;rm -rf aliyundrive
 #git_clone https://github.com/zzsj0928/luci-app-pushbot
 
-echo feeds.conf.default
 cat feeds.conf.default
 
 # 修改默认主题
