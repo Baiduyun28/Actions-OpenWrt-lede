@@ -6,7 +6,6 @@
 
 #echo 'src-git autotimeset https://github.com/sirpdboy/luci-app-autotimeset' >>feeds.conf.default
 #git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
-echo 'src-git ddnsgo https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.default
 #echo 'src-git eqosplus https://github.com/sirpdboy/luci-app-eqosplus' >>feeds.conf.default
 #git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 #echo 'src-git parentcontrol https://github.com/sirpdboy/luci-app-parentcontrol' >>feeds.conf.default
