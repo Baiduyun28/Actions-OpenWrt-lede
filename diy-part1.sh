@@ -5,11 +5,11 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 #echo 'src-git autotimeset https://github.com/sirpdboy/luci-app-autotimeset' >>feeds.conf.default
-#git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
+git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 #echo 'src-git eqosplus https://github.com/sirpdboy/luci-app-eqosplus' >>feeds.conf.default
-#git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
+git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 #echo 'src-git parentcontrol https://github.com/sirpdboy/luci-app-parentcontrol' >>feeds.conf.default
-#git clone https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
+git clone https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
 svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit package/luci-app-cpulimit #版本更新
 svn export https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit package/cpulimit
 #svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol #2.2-20200927
