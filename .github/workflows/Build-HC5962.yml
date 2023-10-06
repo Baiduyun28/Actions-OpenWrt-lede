@@ -107,7 +107,8 @@ jobs:
       run: |
        df -hT
        cd openwrt
-       tar -jcv bin.tar.gz bin
+       ls -la
+       tar -zcvf bin.tar.gz bin
        mv bin.tar.gz ./bin/targets/*/*
 
     - name: Upload bin directory
