@@ -19,6 +19,14 @@
 # 加入编译者信息
 #sed -i 's/OpenWrt /Kinoko build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g' package/lean/default-settings/files/zzz-default-settings
 
+rm -rf package/feeds/luci/luci-app-aliyundrive-webdav
+rm -rf package/feeds/packages/aliyundrive-webdav
+rm -rf package/feeds/luci/luci-app-aliyundrive-fuse
+rm -rf package/feeds/packages/aliyundrive-fuse
+git clone https://github.com/messense/aliyundrive-webdav aliyundrive && mv -n aliyundrive/openwrt/* ./package/ ; rm -rf aliyundrive
+git clone https://github.com/messense/aliyundrive-fuse aliyundrive && mv -n aliyundrive/openwrt/* ./package/;rm -rf aliyundrive
+#git_clone https://github.com/zzsj0928/luci-app-pushbot
+
 # 修改默认主题
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
