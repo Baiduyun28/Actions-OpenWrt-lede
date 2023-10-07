@@ -24,6 +24,8 @@ rm -rf package/feeds/packages/aliyundrive-webdav
 rm -rf package/feeds/luci/luci-app-aliyundrive-fuse
 rm -rf package/feeds/packages/aliyundrive-fuse
 git clone https://github.com/messense/aliyundrive-webdav aliyundrive && mv -n aliyundrive/openwrt/* ./package/ ; rm -rf aliyundrive
+#svn export https://github.com/kenzok8/openwrt-packages/trunk/aliyundrive-webdav package/aliyundrive-webdav
+#svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliyundrive-webdav package/luci-app-aliyundrive-webdav
 git clone https://github.com/messense/aliyundrive-fuse aliyundrive && mv -n aliyundrive/openwrt/* ./package/;rm -rf aliyundrive
 #git_clone https://github.com/zzsj0928/luci-app-pushbot
 
