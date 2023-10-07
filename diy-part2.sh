@@ -17,7 +17,7 @@
 #sed -i '/uci commit system/iuci set system.@system[0].hostname='Soft_Router'' package/lean/default-settings/files/zzz-default-settings
  
 # 加入编译者信息
-#sed -i "s/OpenWrt /Kinoko build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+#sed -i 's/OpenWrt /Kinoko build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g' package/lean/default-settings/files/zzz-default-settings
  
 # 修改默认主题
-#sed -i "s/luci-theme-bootstrap/luci-theme-argon/g" package/feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/collections/luci/Makefile
