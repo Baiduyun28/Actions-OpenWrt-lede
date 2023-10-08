@@ -32,7 +32,7 @@ git clone https://github.com/messense/aliyundrive-fuse aliyundrive && mv -n aliy
 # 修改默认主题
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
 
 # 切换传统交换机swconfig
 sed -i '132,153d' ./target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts
