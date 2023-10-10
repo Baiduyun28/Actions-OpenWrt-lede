@@ -29,6 +29,11 @@ git clone https://github.com/messense/aliyundrive-webdav aliyundrive && mv -n al
 git clone https://github.com/messense/aliyundrive-fuse aliyundrive && mv -n aliyundrive/openwrt/* ./package/;rm -rf aliyundrive
 #git_clone https://github.com/zzsj0928/luci-app-pushbot
 
+rm -rf package/feeds/luci/luci-app-qbittorrent
+rm -rf package/feeds/packages/qbittorrent
+#svn export https://github.com/immortalwrt/luci/branches/openwrt-18.06-k5.4/applications/luci-app-qbittorrent  package/luci-app-qbittorrent
+#svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/qBittorrent-Enhanced-Edition package/qBittorrent-Enhanced-Edition
+
 # 修改默认主题
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
