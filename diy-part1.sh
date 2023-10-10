@@ -29,12 +29,6 @@ svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-time
 #svn export https://github.com/immortalwrt/luci/trunk/openwrt-18.06/applications/luci-app-timecontrol package/luci-app-timecontrol #1.0-1-20200402
 #svn export https://github.com/immortalwrt/luci/trunk/openwrt-18.06/applications/luci-app-timewol package/luci-app-timewol #1.0-3-20190309
 
-#rm -rf package/feeds/luci/luci-app-aliyundrive-webdav
-#rm -rf package/feeds/packages/aliyundrive-webdav
-#rm -rf package/feeds/luci/luci-app-aliyundrive-fuse
-#rm -rf package/feeds/packages/aliyundrive-fuse
-#git clone https://github.com/messense/aliyundrive-webdav aliyundrive && mv -n aliyundrive/openwrt/* ./package/ ; rm -rf aliyundrive
-#git clone https://github.com/messense/aliyundrive-fuse aliyundrive && mv -n aliyundrive/openwrt/* ./package/;rm -rf aliyundrive
 #git_clone https://github.com/zzsj0928/luci-app-pushbot
 
 cat feeds.conf.default
