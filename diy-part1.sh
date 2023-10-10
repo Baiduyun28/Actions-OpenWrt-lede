@@ -20,7 +20,7 @@ svn export https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit package/c
 #echo 'src-git goaliyundrivewebdav2 https://github.com/jerrykuku/go-aliyundrive-webdav' >>feeds.conf.default
 #git clone https://github.com/jerrykuku/go-aliyundrive-webdav package/go-aliyundrive-webdav
 
-#svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-timewol package/luci-app-control-timewol #1.0-3-20220406
+svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-timewol package/luci-app-control-timewol #1.0-3-20220406
 #svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-webrestriction package/luci-app-control-webrestriction
 #svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-weburl package/luci-app-control-weburl
 #svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-timecontrol package/luci-app-timecontrol #1.1-20220505
