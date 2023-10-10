@@ -33,6 +33,8 @@ rm -rf package/feeds/luci/luci-app-qbittorrent
 rm -rf package/feeds/packages/qbittorrent
 #svn export https://github.com/immortalwrt/luci/branches/openwrt-18.06-k5.4/applications/luci-app-qbittorrent  package/luci-app-qbittorrent
 #svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/qBittorrent-Enhanced-Edition package/qBittorrent-Enhanced-Edition
+#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-qbittorrent  package/luci-app-qbittorrent
+#svn export https://github.com/kiddin9/openwrt-packages/trunk/qBittorrent-Enhanced-Edition package/qBittorrent-Enhanced-Edition
 
 # 修改默认主题
 rm -rf package/lean/luci-theme-argon
