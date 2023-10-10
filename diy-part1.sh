@@ -15,11 +15,6 @@ svn export https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit package/c
 #svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-timewol package/luci-app-control-timewol #2.2-20200927
 #svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-watchcat-plus package/luci-app-watchcat-plus
 
-#echo 'src-git goaliyundrivewebdav1 https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav' >>feeds.conf.default
-#git clone https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav package/luci-app-go-aliyundrive-webdav
-#echo 'src-git goaliyundrivewebdav2 https://github.com/jerrykuku/go-aliyundrive-webdav' >>feeds.conf.default
-#git clone https://github.com/jerrykuku/go-aliyundrive-webdav package/go-aliyundrive-webdav
-
 svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-timewol package/luci-app-control-timewol #1.0-3-20220406
 #svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-webrestriction package/luci-app-control-webrestriction
 #svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-weburl package/luci-app-control-weburl
