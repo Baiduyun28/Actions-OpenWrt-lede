@@ -57,6 +57,8 @@ jobs:
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
+        #cd openwrt
+        #git reset --hard a2a0e5b9f6ce420398487ea29a85b0b0c49c9087
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
@@ -102,7 +104,12 @@ jobs:
 
     - name: Check space usage
       if: (!cancelled())
-      run: df -hT
+      run: |
+       df -hT
+       cd openwrt
+       ls -la
+       tar -zcvf bin.tar.gz bin
+       mv bin.tar.gz ./bin/targets/*/*
 
     - name: Upload bin directory
       uses: actions/upload-artifact@main
@@ -135,7 +142,7 @@ jobs:
     - name: Generate release tag
       id: tag
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")-Newifi-d2"
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")-HC5962"
         touch release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
@@ -154,12 +161,15 @@ jobs:
       uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 1
-        keep_minimum_runs: 3
+        keep_minimum_runs: 10
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.1.0
       with:
-        keep_latest: 3
+        keep_latest: 10
+        delete_tags: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
