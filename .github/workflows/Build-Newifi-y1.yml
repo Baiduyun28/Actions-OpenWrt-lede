@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build Newifi-mini
+name: Build Newifi-y1
 
 on:
   repository_dispatch:
