@@ -17,6 +17,9 @@ svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-time
 #svn export https://github.com/immortalwrt/luci/trunk/openwrt-18.06/applications/luci-app-cpulimit package/luci-app-cpulimit #版本旧
 #svn export https://github.com/immortalwrt/luci/trunk/openwrt-18.06/applications/luci-app-timewol package/luci-app-timewol #1.0-3-20190309
 
+svn export https://github.com/openwrt/luci/trunk/applications/luci-app-ser2net package/luci-app-ser2net
+sed -i 's/include ..\/..\/luci.mk/include $(TOPDIR)\/feeds\/luci\/luci.mk/g' package/luci-app-ser2net/Makefile
+
 #git_clone https://github.com/zzsj0928/luci-app-pushbot
 
 cat feeds.conf.default
