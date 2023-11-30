@@ -36,6 +36,9 @@ svn export https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/qB
 #svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-qbittorrent  package/luci-app-qbittorrent
 #svn export https://github.com/kiddin9/openwrt-packages/trunk/qBittorrent-Enhanced-Edition package/qBittorrent-Enhanced-Edition
 
+rm -rf package/feeds/packages/transmission
+git clone https://github.com/transmission/transmission/ package/transmission
+
 # 修改默认主题
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
