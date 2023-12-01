@@ -20,6 +20,14 @@ svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-control-time
 svn export https://github.com/openwrt/luci/trunk/applications/luci-app-ser2net package/luci-app-ser2net
 sed -i 's/include ..\/..\/luci.mk/include $(TOPDIR)\/feeds\/luci\/luci.mk/g' package/luci-app-ser2net/Makefile
 
+sed -i '11~16d' packages/net/transmission/Makefile
+sed -i '10a PKG_VERSION:=4.0.4\
+>PKG_RELEASE:=1\
+>\
+>PKG_SOURCE:=\$(PKG_NAME)-\$(PKG_VERSION).tar.xz\
+>PKG_SOURCE_URL:=https:\/\/github.com\/transmission\/transmission\/releases\/download\/\$(PKG_VERSION)\/\
+>PKG_HASH:=15f7b4318fdfbffb19aa8d9a6b0fd89348e6ef1e86baa21a0806ffd1893bd5a6' packages/net/transmission/Makefile
+
 #git_clone https://github.com/zzsj0928/luci-app-pushbot
 
 cat feeds.conf.default
