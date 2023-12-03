@@ -3,7 +3,7 @@
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-sed -i 's/https:\/\/github.com\/coolsnowwolf\/packages/https:\/\/github.com\/Baiduyun28\/packages/g' feeds.conf.default
+#sed -i 's/https:\/\/github.com\/coolsnowwolf\/packages/https:\/\/github.com\/Baiduyun28\/packages/g' feeds.conf.default
 
 git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
